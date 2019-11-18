@@ -10,6 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script: |
+    ls
+  displayName: 'ls'
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
