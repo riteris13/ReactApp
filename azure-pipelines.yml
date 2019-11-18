@@ -10,18 +10,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: |
-    cd ReactApp
-    cd ClientApp
-    ls
-  displayName: 'Hop to project folder'
-
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
 - script: |
+    cd ReactApp
+    cd ClientApp
     npm install
     npm run build
   displayName: 'npm install and build'
